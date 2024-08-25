@@ -3,8 +3,11 @@ Este es el repositorio del grupo: Los Sacos Del 7
 Los integrantes son:
 
 Yu-Ruey Chang. Rol: 202273562-7
+
 Vicente Carvajal Helqui. Rol: 202273572-4
+
 Alvaro Rojas Valenzuela. Rol : 202273502-3
+
 Cristobal Espinoza Caceres. Rol: 202273507-4
 
 Tutor: Ricardo Salas
