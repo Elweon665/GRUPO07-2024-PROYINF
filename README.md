@@ -14,7 +14,7 @@ Tutor: Ricardo Salas
 Ayudante Asignado: Tabata Ahumada
 
 ##WIKI##
-Link de la wiki:
+Link de la wiki: [enlace](https://github.com/Elweon665/GRUPO-Los-Sacos-Del-7-2024-PROYINF/wiki)
 
 ##Video##
 Link del video (Si es que lo hecemos xD):
