@@ -17,5 +17,5 @@ Los integrantes son:
 ## Wiki
 Link de la [wiki](https://github.com/Elweon665/GRUPO-Los-Sacos-Del-7-2024-PROYINF/wiki)
 
-##Video##
+## Video
 Video Precentación con el Cliente: [https://www.youtube.com/watch?v=abJau21SDIk&feature=youtu.be](https://www.youtube.com/watch?v=abJau21SDIk&feature=youtu.be) \\
