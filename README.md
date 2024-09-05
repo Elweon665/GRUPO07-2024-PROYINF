@@ -10,11 +10,11 @@ Este es el repositorio del grupo: Los Sacos Del 7
 
 **Equipo docente:**
 
-* Tutor: Ricardo Salas
-* Ayudante Asignado: Tabata Ahumada
+* Profesor: Ricardo Salas
+* Ayudante: Tabata Ahumada
 
 ## Wiki
-Link de la [WIKI](https://github.com/Elweon665/GRUPO-Los-Sacos-Del-7-2024-PROYINF/wiki)
+- [Link de la Wki](https://github.com/Elweon665/GRUPO-Los-Sacos-Del-7-2024-PROYINF/wiki)
 
 ## Video
-Video Precentación con el Cliente: [https://www.youtube.com/watch?v=abJau21SDIk&feature=youtu.be](https://www.youtube.com/watch?v=abJau21SDIk&feature=youtu.be) \\
+- [Video Precentación con el Cliente](https://www.youtube.com/watch?v=abJau21SDIk&feature=youtu.be)
