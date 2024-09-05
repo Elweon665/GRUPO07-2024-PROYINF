@@ -18,8 +18,7 @@ Los integrantes son:
 Link de la [wiki](https://github.com/Elweon665/GRUPO-Los-Sacos-Del-7-2024-PROYINF/wiki)
 
 ##Video##
-Link del video (Si es que lo hecemos xD):
-
+Video Precentación con el Cliente: [hi](https://www.youtube.com/watch?v=abJau21SDIk&feature=youtu.be)
 Aspectos Tecnicos:
 Los aspectos tecnicos que podriamos considerar para realizar el proyecto es:
 -En primer lugar, un entorno de desarrollo basado en el desarrollo web para la creacion de la pagina en
