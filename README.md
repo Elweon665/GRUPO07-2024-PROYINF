@@ -14,7 +14,9 @@ Este es el repositorio del grupo: Los Sacos Del 7
 * Ayudante: Tabata Ahumada
 
 ## Wiki
-Puede acceder a la Wiki mediante este [enlace](https://github.com/Elweon665/GRUPO-Los-Sacos-Del-7-2024-PROYINF/wiki)
+Puede acceder a la Wiki mediante este [enlace](https://github.com/Elweon665/GRUPO-Los-Sacos-Del-7-2024-PROYINF/wiki).
 
-## Video
-- [Video Precentación con el Cliente](https://www.youtube.com/watch?v=abJau21SDIk&feature=youtu.be)
+## Videos
+- [Video Presentación con el Cliente](https://www.youtube.com/watch?v=abJau21SDIk&feature=youtu.be)
+- Video Presentación Avance 1. (WIP)
+- Video Presentación Entrega Final. (WIP)
