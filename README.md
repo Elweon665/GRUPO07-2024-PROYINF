@@ -1,6 +1,5 @@
-# GRUPO Los Sacos Del 7
-Este es el repositorio del grupo: Los Sacos Del 7
-
+# GRUPO 7, Proyecto
+Este es el repositorio del grupo 7
 **Los integrantes son:**
 
 * Yu-Ruey Chang. (Rol: 202273562-7)
