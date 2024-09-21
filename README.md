@@ -23,7 +23,7 @@ Puede acceder a la Wiki mediante este [enlace](https://github.com/Elweon665/GRUP
 ## Instalación de Proyeto
 1. Instalar la útilma versión de [Python](https://www.python.org/).
 2. Instalar la última versión de [Django](https://www.djangoproject.com/).
-3. Descargar y descomprimir el ZIP del reprositorio.
+3. Descargar y descomprimir el [ZIP](https://github.com/Elweon665/GRUPO07-2024-PROYINF/archive/refs/heads/main.zip) del reprositorio.
 4. Abrír la terminal en la dirección de la carpeta descomprimida.
 5. Ejecutar `py .\Boletines\manage.py runserver`.
 6. Acceder a _http://127.0.0.1:8000/_ desde cualquier navegador y listo!
