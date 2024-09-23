@@ -21,7 +21,7 @@ Puede acceder a la Wiki mediante este [enlace](https://github.com/Elweon665/GRUP
 - Video Presentación Entrega Final. (WIP)
 
 ## Instalación de Proyecto
-1. Instalar la útilma versión de [Python](https://www.python.org/).
+1. Instalar la última versión de [Python](https://www.python.org/).
 2. Instalar la última versión de [Django](https://www.djangoproject.com/).
 3. Descargar y descomprimir el [ZIP](https://github.com/Elweon665/GRUPO07-2024-PROYINF/archive/refs/heads/main.zip) del reprositorio.
 4. Abrír la terminal en la dirección de la carpeta descomprimida.
