@@ -13,4 +13,5 @@ cuando el usuario entre a la página nombrePagina.com/Nombre_URL
 """
 urlpatterns = [
     path('', views.test, name='HomePage'),
+    path('descargar-boletin/', views.descargar_boletin, name='descargar_boletin'),
 ]
