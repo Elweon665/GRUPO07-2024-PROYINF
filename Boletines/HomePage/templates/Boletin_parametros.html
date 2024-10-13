@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <script>
+        function descargarPDF(event) {
+            event.preventDefault(); // Evita el envío del formulario
+            window.location.href = "{% url 'descargar_pdf' %}"; // URL para descargar el PDF
+        }
+    </script>
+</head>
+<body>
+    
+    <h1>Boletines parametrizados</h1>
+    <h2>Define los parametros para la generacion de un boletin</h2>
+    <form onsubmit="Descargar_pdf">
+        <label for="Parametros">Define los paramtros aquí:</label><br>
+        <textarea id="parametros" name="parametros" rows="7" cols="50" placeholder="Escribe los parametros"></textarea><br><br>
+    </form>
+    <a href="{% url 'enviar_parametros' %}">
+        <button type="button">Enviar</button>
+    </a>
+    
+</body>
+</html>

@@ -13,4 +13,11 @@ cuando el usuario entre a la página nombrePagina.com/Nombre_URL
 """
 urlpatterns = [
     path('', views.test, name='HomePage'),
+    path('descargar-boletin/', views.descargar_boletin, name='descargar_boletin'),
+    path('boletin_junio_2024/', views.boletin_junio_2024_descargar, name='boletin_junio_2024_descargar'),
+    path('Consultaboletines/', views.Consultarboletines, name='Consultaboletines'),
+    path('mostrar-boletin/', views.mostrar_boletin, name='mostrar_boletin'),
+    path('Boletin_parametros/', views.Boletin_parametros, name='Boletin_parametros'),
+    path('Descargar_pdf/', views.descargar_pdf, name='descargar_pdf'),
+    path('enviar-parametros/', views.enviar_parametros, name='enviar_parametros'),
 ]
