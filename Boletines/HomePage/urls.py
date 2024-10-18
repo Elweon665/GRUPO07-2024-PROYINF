@@ -20,4 +20,5 @@ urlpatterns = [
     path('Boletin_parametros/', views.Boletin_parametros, name='Boletin_parametros'),
     path('Descargar_pdf/', views.descargar_pdf, name='descargar_pdf'),
     path('enviar-parametros/', views.enviar_parametros, name='enviar_parametros'),
+    path('descargar-boletin/', views.descargar_boletin, name='descargar_boletin'),
 ]
