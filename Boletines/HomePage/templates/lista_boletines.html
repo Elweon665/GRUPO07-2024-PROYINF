@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<h1>Lista de boletines existentes</h1>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>View</th>
+            <th>Download</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for pdf in pdfs %}
+        <tr>
+            <td>{{ pdf.title }}</td>
+            <td><a href="{% url 'view_pdf' pdf.id %}" class="btn btn-primary">View</a></td>
+            <td><a href="{% url 'download_pdf' pdf.id %}" class="btn btn-success">Download</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

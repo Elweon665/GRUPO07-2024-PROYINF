@@ -12,13 +12,9 @@ La parte Nombre_URL/ sirve para indicar que se debe llamar a esa APP solamente
 cuando el usuario entre a la página nombrePagina.com/Nombre_URL
 """
 urlpatterns = [
-    path('', views.test, name='HomePage'),
-    path('descargar-boletin/', views.descargar_boletin, name='descargar_boletin'),
-    path('boletin_junio_2024/', views.boletin_junio_2024_descargar, name='boletin_junio_2024_descargar'),
-    path('Consultaboletines/', views.Consultarboletines, name='Consultaboletines'),
-    path('mostrar-boletin/', views.mostrar_boletin, name='mostrar_boletin'),
-    path('Boletin_parametros/', views.Boletin_parametros, name='Boletin_parametros'),
-    path('Descargar_pdf/', views.descargar_pdf, name='descargar_pdf'),
-    path('enviar-parametros/', views.enviar_parametros, name='enviar_parametros'),
-    path('descargar-boletin/', views.descargar_boletin, name='descargar_boletin'),
+#    path('', views.test, name='HomePage'),
+    path('', views.lista_boletines, name='lista_boletines'),
+    path('view/<int:pdf_id>/', views.view_pdf, name='view_pdf'),
+    path('download/<int:pdf_id>/', views.download_pdf, name='download_pdf'),
+    path('tags/', views.generar, name='generar'),
 ]
