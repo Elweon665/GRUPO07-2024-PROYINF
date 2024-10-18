@@ -4,5 +4,5 @@ from .models import Tag
 class TagSelectionForm(forms.Form):
     tags = forms.ModelMultipleChoiceField(
         queryset=Tag.objects.all(),
-        widget=forms.CheckboxSelectMultiple
+        widget=forms.SelectMultiple(attrs={'class': 'select2'})
     )

@@ -1,7 +1,7 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.template import loader
-from django.http import FileResponse, Http404
+from django.http import FileResponse, Http404, JsonResponse
 from .models import PDF
 from .forms import TagSelectionForm
 import os
@@ -33,7 +33,9 @@ def generar(request):
         if form.is_valid():
             selected_tags = form.cleaned_data['tags']
             # Handle the selected tags
-            success_message = "La IA(que no existe) NO esta generando el boletin deseado, prontamente el boletin NO estara disponible."
+            return JsonResponse({'success': True})
+        else:
+            return JsonResponse({'success': False, 'errors': form.errors}, status=400)
     else:
         form = TagSelectionForm()
 
