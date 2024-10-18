@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+</head>
+<body>
+    
+    <h1>Consulta de boletines</h1>
+    <h2>Descarga o revisa los boletines previamente creados</h2>
+    <h3>Boletin de Junio 2024:</h3>
+    <a href="{% url 'boletin_junio_2024_descargar' %}">
+        <button type="button">Descargar Boletin</button>
+    </a>
+    <br>
+    <br>
+    <a href="{% url 'mostrar_boletin' %}">
+        <button type="button">Ver Boletín</button>
+    </a>
+</body>
+</html>
