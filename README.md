@@ -18,7 +18,7 @@ Puede acceder a la Wiki mediante este [enlace](https://github.com/Elweon665/GRUP
 
 ## Videos
 - [Video Presentación con el Cliente](https://www.youtube.com/watch?v=abJau21SDIk&feature=youtu.be)
-- Video Presentación Avance 1. (WIP)
+- [Video Presentación Hito 3](https://www.youtube.com/watch?v=zIsVM4g1hY8).
 - Video Presentación Entrega Final. (WIP)
 
 ## Instalación de Proyecto
