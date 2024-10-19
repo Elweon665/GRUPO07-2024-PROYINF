@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+</head>
+<body>
+    <div id="main">
+        <h1>Las noticias recopiladas de la página son las siguientes:</h1>
+        {% if interest %}
+        {% for inter in interest%}
+        <h2>{{inter.title}}</h2>
+        <p> {{inter.content}} </p>
+        {% endfor %}
+        {% endif %}
+    </div>
+</body>
+</html>
