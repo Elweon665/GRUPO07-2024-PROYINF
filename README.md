@@ -11,8 +11,8 @@ Este es el repositorio del grupo 7
 
 * Profesor: Ricardo Salas
 * Ayudante: Tabata Ahumada
-## Estado de las tareas identificadas (Respecto a las historias de usuario): 
-https://github.com/Elweon665/GRUPO07-2024-PROYINF/issues
+## Estado de las tareas identificadas: 
+- [Enlase Issues del Repositorio](https://github.com/Elweon665/GRUPO07-2024-PROYINF/issues).
 ## Wiki
 Puede acceder a la Wiki mediante este [enlace](https://github.com/Elweon665/GRUPO-Los-Sacos-Del-7-2024-PROYINF/wiki).
 
