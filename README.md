@@ -26,6 +26,7 @@ Puede acceder a la Wiki mediante este [enlace](https://github.com/Elweon665/GRUP
 2. Instalar la última versión de [Django](https://www.djangoproject.com/).
 3. Descargar y descomprimir el [ZIP](https://github.com/Elweon665/GRUPO07-2024-PROYINF/archive/refs/heads/main.zip) del reprositorio.
 4. Abrír la terminal en la dirección de la carpeta descomprimida.
-5. Ejecutar `.\Scripts\activate.bat`.
-6. Ejecutar `python .\Boletines\manage.py runserver`.
-7. Acceder a _http://127.0.0.1:8000/_ desde cualquier navegador y listo!
+5. En *pyvenv.cfg*, cambiar %USER% por el usuario local de su sistema computacional.
+6. Ejecutar `.\Scripts\activate.bat`.
+7. Ejecutar `python .\Boletines\manage.py runserver`.
+8. Acceder a _http://127.0.0.1:8000/_ desde cualquier navegador y listo!
