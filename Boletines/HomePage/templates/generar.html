@@ -1,0 +1,36 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<h1>Seleccione los parametros del boletin deseado</h1>
+<form method="post" id="tagForm">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.select2').select2({
+            placeholder: "Select tags",
+            width: '100%'
+        });
+
+        $('#tagForm').on('submit', function(e) {
+            e.preventDefault(); // Prevent the default form submission
+            $.ajax({
+                type: $(this).attr('method'),
+                url: $(this).attr('action'),
+                data: $(this).serialize(),
+                success: function() {
+                    alert("La IA(que no existe) NO esta generando el boletin deseado, prontamente el boletin NO estara disponible.");
+                    window.location.href = "{% url 'lista_boletines' %}";
+                }
+            });
+        });
+    });
+</script>
+
+{% endblock %}
