@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<h1>Registrate</h1>
+<table class="table table-bordered">
+
+    {% if messages %}
+        {% for message in messages %}
+            <p style="color: green;">{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Registrarse</button>
+    </form>
+</table>
+
+{% endblock %}

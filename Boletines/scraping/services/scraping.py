@@ -35,8 +35,12 @@ def get_content(url):
     html_content = session.get(f'{url}').text
     
     return html_content
-    
+
+'''
+Esta función se encarga de recolectar todo el contenido oculto que requiera de solicitudes AJAX.
+''' 
 def scrap_urls():
+    links = []
     interests = []
     offset = 0
     
@@ -69,6 +73,9 @@ def scrap_urls():
 
     return interests
 
+'''
+Esta función se encarga de recolectar el contenido de todas las noticias scrapeadas de los sitios de noticias.
+'''
 def scrap_news(link):
     html_content = get_content(link)
     soup = BeautifulSoup(html_content, 'html.parser')

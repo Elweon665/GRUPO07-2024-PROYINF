@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+{% extends 'main.html' %}
+
+{% block content %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +11,7 @@
 </head>
 <body>
     <div id="main">
-        <h1>Las noticias recopiladas de la página son las siguientes:</h1>
+        <h1>Las noticias recopiladas de la página son las siguientes:</h1><br>
         {% if interest %}
         {% for inter in interest%}
         <h2>{{inter.title}}</h2>
@@ -17,3 +21,5 @@
     </div>
 </body>
 </html>
+
+{% endblock %}

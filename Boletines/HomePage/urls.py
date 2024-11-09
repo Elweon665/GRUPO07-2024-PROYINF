@@ -17,4 +17,7 @@ urlpatterns = [
     path('view/<int:pdf_id>/', views.view_pdf, name='view_pdf'),
     path('download/<int:pdf_id>/', views.download_pdf, name='download_pdf'),
     path('tags/', views.generar, name='generar'),
+    path('login/', views.login_view, name='login'),
+    path('logout/', views.logout_view, name='logout'),
+    path('register/', views.register_view, name='register')
 ]

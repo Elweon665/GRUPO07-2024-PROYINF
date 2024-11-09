@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'HomePage',
-    'scraping'
+    'scraping',
+    'IA'
 ]
 
 MIDDLEWARE = [
@@ -102,6 +103,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = 'HomePage.User'
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/

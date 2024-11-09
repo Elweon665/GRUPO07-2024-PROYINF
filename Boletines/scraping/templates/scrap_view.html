@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+{% extends 'main.html' %}
+
+{% block content %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,17 +15,20 @@
         <p> Esta sección va a ser la encargada de realizar las solicitudes de webscraping a la fuentes a utilizar para poder recopilar
             las nuevas noticias que se vayan lanzando en los sitios. Por ahora solamente es funcional con la página https://www.1pointfive.com/news,
             además de que solamente se mostrarán los resultados de la aplicación de webscrap por ahora.<br>
-            Si quiere revisar el contenido de las noticias puede hacer uso del siguiente boton: 
+            Si quiere revisar el contenido de las noticias puede hacer uso del siguiente boton (la pagina puede demorar un poco en cargar): 
         <p>
         <form action="/scrap/news" method="get">
-            <button type="submit">Ir a Nueva Página</button>
+            <button type="submit">Revisar contenido de noticias</button>
+        </form><br>
 
         {% if interests %}
         {% for interest in interests %}
-        <p>{{interest.title}}</p>
+        <h2>{{interest.title}}</h2>
         <p>{{interest.link}}</p><br>
         {% endfor %}
         {% endif %}
     </div>
 </body>
 </html>
+
+{% endblock %}
