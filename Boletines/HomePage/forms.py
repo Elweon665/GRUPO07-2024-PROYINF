@@ -13,7 +13,6 @@ class TagSelectionForm(forms.Form):
 class CustomAuthenticationForm(AuthenticationForm):
     username = forms.CharField(label="Username", max_length=50)
     password = forms.CharField(label="Password", widget=forms.PasswordInput, max_length=50)
-    nombre = forms.CharField(label="Nombre", max_length=50, required=False)
     
 class UserRegistrationForm(UserCreationForm):
     class Meta:
