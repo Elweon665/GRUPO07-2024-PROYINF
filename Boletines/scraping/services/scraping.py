@@ -1,6 +1,7 @@
 from django.shortcuts import render
 import requests
 from bs4 import BeautifulSoup
+from scraping.models import Scrap
 
 def get_content_AJAX(url):
     USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebkit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36"
@@ -191,8 +192,6 @@ def scrap_aedyr_article(link):
         # Si no se encuentra el div
         article_text = "Contenido no encontrado"
 
-    print(article_text)
-
     return {
         "date": date_text,
         "content": article_text
@@ -207,3 +206,101 @@ def scrap_ares():
 def scrap_ares_article():
     return
 '''
+
+
+def scrap_agricology():
+    interests = []
+    offset = 1
+    found = True
+    while found:
+        found = False
+        url = ("https://agricology.co.uk/events/?_"
+                f"paged={offset}")
+        html_content = get_content_AJAX(url)
+        soup = BeautifulSoup(html_content, 'html.parser')
+        articles = soup.find('div', class_='fwpl-layout events-post-block')
+        if articles == '<div class="fwpl-layout events-post-block"></div>':
+            break
+        
+        i = 1
+        while True:
+            article = articles.find('div', class_='fwpl-result r' + str(i))
+            if article == None:
+                break
+            title = article.find('div', class_='fwpl-item farmer-grid-title').find('h3').text.strip()
+            link = article.find('div', class_='fwpl-item farmer-grid-thumb').find('a')['href']
+            interests.append({'title': title, 'link': link})
+            found = True
+            i += 1
+        
+        offset += 1
+    
+    return interests
+
+def scrap_agricology_article(link):
+    html_content = get_content(link)
+    soup = BeautifulSoup(html_content, 'html.parser')
+    
+    # Cuerpo/Contenido de la noticia
+    content_div = soup.find('div', class_='entry-content')
+    if content_div:
+        # Busca el título en el h3,
+        
+        title = content_div.find('div', class_='col-md-12')
+        title = title.find('h1').text.strip()
+        # title = title.find('h1').text.strip()
+        date = content_div.find('div', class_='event-meta').text.strip()[7:]
+        
+        content = content_div.find('div', class_='row d-flex justify-content-between')
+        text = content.find_all('p')
+        # Junta todos los parrafos encontrados en el div
+        article_text = title + "\n".join([p.text.strip() for p in text])
+    else:
+        # Si no se encuentra el div
+        article_text = "Contenido no encontrado"
+        
+
+    return {
+        "date": date,
+        "content": article_text
+    }
+    
+def database_update():
+    interest = scrap_urls()
+    titulo = [p['title'] for p in interest]
+    link = [p['link'] for p in interest]
+    interests = [scrap_news(p['link']) for p in interest]
+    interest = [p['content'] for p in interests]
+    final = zip(titulo, link, interests)
+    scrap_objects = [Scrap(title=title, link=link, content=content) for title, link, content in final]
+    Scrap.objects.bulk_create(scrap_objects, ignore_conflicts=True)
+    
+    interest = scrap_apnews()
+    titulo = [p['title'] for p in interest]
+    link = [p['link'] for p in interest]
+    interests = [scrap_apnews_article(p['link']) for p in interest]
+    interest = [p['content'] for p in interests]
+    final = zip(titulo, link, interests)
+    scrap_objects = [Scrap(title=title, link=link, content=content) for title, link, content in final]
+    Scrap.objects.bulk_create(scrap_objects, ignore_conflicts=True)
+    
+    interest = scrap_aedyr()
+    titulo = [p['title'] for p in interest]
+    link = [p['link'] for p in interest]
+    interests = [scrap_aedyr_article(p['link']) for p in interest]
+    interest = [p['content'] for p in interests]
+    final = zip(titulo, link, interests)
+    scrap_objects = [Scrap(title=title, link=link, content=content) for title, link, content in final]
+    Scrap.objects.bulk_create(scrap_objects, ignore_conflicts=True)
+    
+    interest = scrap_agricology()
+    titulo = [p['title'] for p in interest]
+    link = [p['link'] for p in interest]
+    interests = [scrap_agricology_article(p['link']) for p in interest]
+    interest = [p['content'] for p in interests]
+    final = zip(titulo, link, interests)
+    scrap_objects = [Scrap(title=title, link=link, content=content) for title, link, content in final]
+    Scrap.objects.bulk_create(scrap_objects, ignore_conflicts=True)
+    
+    
+    return

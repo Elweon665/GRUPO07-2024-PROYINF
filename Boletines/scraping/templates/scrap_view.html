@@ -19,7 +19,28 @@
         <p>
         <form action="/scrap/news" method="get">
             <button type="submit">Revisar contenido de noticias</button>
-        </form><br>
+            <button id="update-database-button">Actualizar Base de Datos</button>
+        </form>
+
+        <script>
+            document.getElementById("update-database-button").addEventListener("click", function() {
+                fetch("{% url 'update_database' %}", {
+                    method: "POST",
+                    headers: {
+                        "X-CSRFToken": "{{ csrf_token }}"
+                    },
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert(data.message);
+                    } else {
+                        alert("Error: " + data.message);
+                    }
+                })
+                .catch(error => console.error("Error:", error));
+            });
+        </script>
 
         {% if interests %}
         {% for interest in interests %}
