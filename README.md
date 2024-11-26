@@ -19,7 +19,7 @@ Puede acceder a la Wiki mediante este [enlace](https://github.com/Elweon665/GRUP
 ## Videos
 - [Video Presentación con el Cliente](https://www.youtube.com/watch?v=abJau21SDIk&feature=youtu.be)
 - [Video Presentación Hito 3](https://www.youtube.com/watch?v=zIsVM4g1hY8).
-- Video Presentación Entrega Final. (WIP)
+- [Video Presentación Entrega Final](https://youtu.be/_QjDk0H9CUI)
 
 ## Instalación de Proyecto
 1. Instalar la última versión de [Python](https://www.python.org/).
