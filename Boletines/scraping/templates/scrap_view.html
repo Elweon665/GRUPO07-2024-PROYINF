@@ -12,13 +12,44 @@
 <body>
     <div id="main">
         <h1>Webscraping Requests</h1>
-        <p> Esta sección va a ser la encargada de realizar las solicitudes de webscraping a la fuentes a utilizar para poder recopilar
-            las nuevas noticias que se vayan lanzando en los sitios. Por ahora solamente es funcional con la página https://www.1pointfive.com/news,
-            además de que solamente se mostrarán los resultados de la aplicación de webscrap por ahora.<br>
-            Si quiere revisar el contenido de las noticias puede hacer uso del siguiente boton (la pagina puede demorar un poco en cargar): 
         <p>
+            Esta sección va a ser la encargada de realizar las solicitudes de webscraping a las fuentes seleccionadas para recopilar
+            nuevas noticias. A continuacion puede elegir una de las 4 páginas las cuales se ha podido implementar el webscrap.
+        </p>
+
+        <!-- Formulario para seleccionar la fuente -->
+        <form method="get" action="">
+            <label for="scrap-page">Seleccionar página a webscrapear:</label>
+            <select id="scrap-page" name="page">
+                <option value="-">Seleccionar una fuente</option>
+                <option value="1pointfive" {% if selected_page == "1pointfive" %}selected{% endif %}>1PointFive News</option>
+                <option value="aedyr" {% if selected_page == "aedyr" %}selected{% endif %}>AEDyR Eventos</option>
+                <option value="apnews" {% if selected_page == "apnews" %}selected{% endif %}>AP News - Water Quality</option>
+                <option value="agricology" {% if selected_page == "agricology" %}selected{% endif %}>Agricology UK</option>
+            </select>
+            <button type="submit">Cargar contenido</button>
+        </form><br>
+
+        <p>
+            También si lo desea puede revisar directamente el contenido de las noticias scrapeadas de la página seleccionada.
+        </p>
+        <!-- Botón para redirigir a la página de noticias detalladas -->
         <form action="/scrap/news" method="get">
+            <label for="scrap-page">Seleccionar página a revisar contenido de noticias:</label>
+            <select id="scrap-page" name="page">
+                <option value="-">Seleccionar una fuente</option>
+                <option value="1pointfive" {% if selected_page == "1pointfive" %}selected{% endif %}>1PointFive News</option>
+                <option value="aedyr" {% if selected_page == "aedyr" %}selected{% endif %}>AEDyR Eventos</option>
+                <option value="apnews" {% if selected_page == "apnews" %}selected{% endif %}>AP News - Water Quality</option>
+                <option value="agricology" {% if selected_page == "agricology" %}selected{% endif %}>Agricology UK</option>
+            </select>
             <button type="submit">Revisar contenido de noticias</button>
+        </form><br>
+
+        <p>
+            Por último, aquí está la opción de actualizar la base de datos con todas las noticias nuevas que puedan salir.
+        </p>
+        <form action="" method="get">
             <button id="update-database-button">Actualizar Base de Datos</button>
         </form>
 
@@ -42,11 +73,15 @@
             });
         </script>
 
+        <!-- Mostrar el contenido scrapeado -->
         {% if interests %}
-        {% for interest in interests %}
-        <h2>{{interest.title}}</h2>
-        <p>{{interest.link}}</p><br>
-        {% endfor %}
+            {% for interest in interests %}
+                <h2>{{ interest.title }}</h2>
+                <p>{{ interest.link }}</p>
+                <hr>
+            {% endfor %}
+        {% else %}
+            <p>No se encontró contenido para la fuente seleccionada.</p>
         {% endif %}
     </div>
 </body>
