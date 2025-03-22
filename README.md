@@ -31,3 +31,6 @@ Puede acceder a la Wiki mediante este [enlace](https://github.com/Elweon665/GRUP
 7. Ejecutar `.\Scripts\activate`.
 8. Ejecutar `python .\Boletines\manage.py runserver`.
 9. Acceder a _http://127.0.0.1:8000/_ desde cualquier navegador y listo!
+
+
+Se continuara el proyecto en Ingenieria de Software(INF225) como grupo 17 compuesto por los mismos integrantes.
