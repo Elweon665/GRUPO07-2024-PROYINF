@@ -9,8 +9,8 @@ Este es el repositorio del grupo 17
 
 **Equipo docente:**
 
-* Profesor: Ricardo Salas
-* Ayudante: Tabata Ahumada
+* Profesor: Marcelo Visconti / Ricardo Salas
+* Ayudante: Alex Arrutia
 ## Estado de las tareas identificadas: 
 - [Enlase Issues del Repositorio](https://github.com/Elweon665/GRUPO07-2024-PROYINF/issues).
 ## Wiki
