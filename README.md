@@ -1,5 +1,5 @@
-# GRUPO 7, Proyecto
-Este es el repositorio del grupo 7
+# GRUPO 17, Proyecto
+Este es el repositorio del grupo 17
 **Los integrantes son:**
 
 * Yu-Ruey Chang. (Rol: 202273562-7)
